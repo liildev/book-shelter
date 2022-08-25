@@ -1,0 +1,39 @@
+html{
+    box-sizing: border-box;
+}
+
+*, 
+*::after,
+*::before{
+    box-sizing: inherit;
+
+}
+
+body{
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Rubik';
+    font-weight: 400;
+    background-color:  #F8FAFD;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin: 0;
+}
+
+img{
+    // display: inline-block;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+

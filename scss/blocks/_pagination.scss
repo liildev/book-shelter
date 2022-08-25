@@ -1,0 +1,42 @@
+.page__block{
+    display: flex;
+    margin: 0;
+    margin-top: 33px;
+}
+
+.page__item{
+    list-style: none;
+    min-width: 32px;
+    height: 32px;
+    padding: 4px;
+    background: #FFFFFF;
+    border: 1px solid #DFE3E8;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: #0D75FF;
+    margin-right: 8px;
+    cursor: pointer;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.page__active{
+    border: 1px solid #0D75FF;
+}
+
+.page__disablet{
+    color: white;
+    background: #919EAB;
+    opacity: 0.5;
+}
+
+.page__list{
+    display: flex;
+    padding: 0;
+    margin-right: 8px;
+}

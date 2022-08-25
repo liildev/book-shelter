@@ -1,0 +1,103 @@
+.main__block{
+    display: flex;
+}
+.section{
+    width: 79%;
+    &__block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+    }
+}
+
+.card__block{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 33px;
+    column-gap: 33px;
+}
+
+.card{
+    width: 268px;
+    padding: 13px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    &__img{
+        width: 100%;
+        height: 238px;
+        border-radius: 5px;
+        padding: 19px;
+        align-self: center;
+        background-color: #F8FAFD;
+        margin-bottom: 19px;
+        & > img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 2px;
+    }
+    &__author{
+        font-family: 'Noto Sans';
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        color: #757881;
+    }
+    &__year{
+        font-family: 'Noto Sans';
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        color: #757881;
+    }
+    &__btns{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__btn{
+        width: 49%;
+        height: 37px;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        width: 49%;
+        height: 37px;
+        border: none;
+        outline: none;
+        margin-top: 10px;
+        transition: all 0.3s;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    &__bookmark__btn{
+        background: #FFD80D;
+    }
+    &__info__btn{
+        background: rgba(13, 117, 255, 0.05);
+        color: #0D75FF;
+    }
+    &__read__btn{
+        width: 100%;
+        background: #75828A;
+        color: white;
+        margin-top: 5px;
+    }
+}

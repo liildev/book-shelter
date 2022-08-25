@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Noto+Sans&family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form autocomplete="off" id="form" class="form">
+      <div class="form__logo">
+        <img class="form__logo__img" src="./img/form_logo.svg" alt="logo" />
+      </div>
+      <div class="form__name">
+        <input
+          type="text"
+          value="eve.holt@reqres.in"
+          class="form__name__input"
+          placeholder="Username"
+          id="input_name"
+        />
+      </div>
+      <div class="form__name form__password">
+        <input
+          type="password"
+          value="cityslicka"
+          class="form__name__input"
+          placeholder="password"
+          id="input_password"
+        />
+      </div>
+      <button class="form__btn" type="submit" id="form__btn">LOGIN</button>
+      <a class="form__link" href="#">FORGOT PASSWORD?</a>
+    </form>
+  </body>
+  <script src="./js/login.js"></script>
+</html>

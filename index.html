@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Noto+Sans&family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <div class="wrapper" style="display: none" id="wrapper"></div>
+
+    <nav class="nav">
+      <div class="container">
+        <div class="nav__block">
+          <div class="nav__logo">
+            <img src="./img/nav_logo1.svg" alt="navLogo" />
+          </div>
+
+          <label class="nav__search">
+            <img
+              class="nav__icon"
+              data-search="search"
+              src="./img/search_icon.svg"
+              alt=""
+            />
+            <input
+              type="search"
+              class="nav__input"
+              id="searchInput"
+              value="JavaScript"
+              placeholder="Search books"
+            />
+          </label>
+
+          <div class="nav__logout">
+            <img class="nav__logout__icon" src="./img/sun.svg" />
+            <button id="logout">Logout</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__block">
+          <p class="header__results" id="results">Showing 18 Result(s)</p>
+
+          <button data-order="newest" class="header__btn">
+            <img data-order="newest" src="./img/calendar.svg" alt="" />
+            Order by newest
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="main__block">
+          <aside class="aside">
+            <div class="aside__block">
+              <h3 class="aside__title">Bookmarks</h3>
+
+              <p class="aside__desc">
+                If you don’t like to read, you haven’t found the right book
+              </p>
+
+              <div class="bookmarks" id="bookmarkBlock"></div>
+            </div>
+          </aside>
+
+          <section class="section">
+            <div class="section__block">
+              <div class="card__block" id="card__block"></div>
+
+              <ul class="page__block" id="page__block">
+                <li
+                  class="page__item page__disablet"
+                  id="prevPage"
+                  data-page="prev"
+                >
+                  <
+                </li>
+                <ul class="page__list" id="page__list">
+                  <li class="page__item" id="page1" data-page="1">1</li>
+                  <li class="page__item" id="page2" data-page="2">2</li>
+                  <li class="page__item" id="pagedot">...</li>
+                  <li class="page__item" id="page3" data-page="4">4</li>
+                  <li class="page__item" id="page4" data-page="5">5</li>
+                </ul>
+                <li class="page__item" data-page="next" id="nextPage">></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <template id="card__template">
+      <div class="card">
+        <div class="card__img">
+          <img id="img" src="" alt="" />
+        </div>
+
+        <h4 class="card__title" id="title">Python</h4>
+
+        <p class="card__author" id="author"></p>
+
+        <p class="card__year" id="year">2009</p>
+
+        <div class="card__btns">
+          <button class="card__bookmark__btn card__btn" data-task="bookmark">
+            Bookmark
+          </button>
+          <button class="card__info__btn card__btn" data-task="moreInfo">
+            More Info
+          </button>
+          <button class="card__read__btn card__btn">Read</button>
+        </div>
+      </div>
+    </template>
+
+    <template id="page__template">
+      <li class="page__item"></li>
+    </template>
+
+    <template id="bookmarkTemplate">
+      <div class="bookmark">
+        <div class="bookmark__info">
+          <h5 class="bookmark__title" id="mark_title">Python</h5>
+          <p class="bookmark__desc" id="mark_author"></p>
+        </div>
+
+        <div class="bookmark_icons">
+          <img src="./img/book-open.svg" alt="" />
+          <img src="./img/delet.svg" data-task="delet" alt="" />
+        </div>
+      </div>
+    </template>
+
+    <template id="wrapperTemplate">
+      <div class="modal">
+        <div class="modal__nav">
+          <h3 class="modal__title" id="wrapper__title">Python</h3>
+          <button class="modal__btn" data-close="close">
+            <span class="modal__btn__line" data-close="close"></span>
+            <span class="modal__btn__line rotate" data-close="close"></span>
+          </button>
+        </div>
+
+        <div class="modal__img">
+          <img id="wrapper__img" src="./img/py.svg" alt="" />
+        </div>
+
+        <div class="modal__desc" id="wrapper__desc">
+          Culpa nulla pariatur cupidatat nisi incididunt ea do ipsum. Incididunt
+          quis mollit elit commodo cillum eiusmod reprehenderit labore irure.
+          Cillum et incididunt et nostrud exercitation quis aute laboris non ut
+          adipisicing. Laboris ad minim aute nulla proident deserunt velit anim
+          sunt aliquip ut sit. Exercitation aliquip ullamco officia non aliqua.
+          Sint deserunt aliquip veniam id eiusmod sit consectetur mollit ea
+          aliqua officia consequat. Magna non mollit nisi est commodo voluptate
+          aute id. Deserunt nostrud id do in nisi mollit deserunt non. Pariatur
+          fugiat cillum irure elit sint nisi ad ipsum culpa deserunt cupidatat
+          esse consequat laboris. Id aliquip non consectetur esse proident duis
+          Lorem.
+        </div>
+
+        <div class="modal__author" id="wrapper__author">
+          <p class="author">Author :</p>
+        </div>
+
+        <div class="modal__author" id="wrapper__published">
+          <p class="author">Published :</p>
+        </div>
+
+        <div class="modal__author" id="wrapper__publishers">
+          <p class="author">Publishers:</p>
+        </div>
+
+        <div class="modal__author" id="wrapper__categories">
+          <p class="author">Categories:</p>
+        </div>
+
+        <div class="modal__author" id="wrapper__pages">
+          <p class="author">Pages Count:</p>
+        </div>
+
+        <div class="modal__footer">
+          <button class="modal__footer__btn">Read</button>
+        </div>
+      </div>
+    </template>
+
+    <template id="modalItemTemplate">
+      <div class="modal__item"></div>
+    </template>
+  </body>
+  <!-- <script src="./js/check_login.js"></script> -->
+  <script src="./js/render.js"></script>
+  <script src="./js/pagination.js"></script>
+  <script src="./js/search.js"></script>
+  <script src="./js/bookmark.js"></script>
+  <script src="./js/info.js"></script>
+  <script src="./js/logout.js"></script>
+</html>

@@ -1,0 +1,41 @@
+.header{
+    width: 100%;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+    background: white;
+    position: relative;
+    z-index: 10;
+    &__block{
+        max-width: 937px;
+        width: 100%;
+        margin-left: auto;
+        padding: 11px 40px 11px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__results{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #222531;
+    }
+    &__btn{
+        min-width: 165px;
+        height: 34px;
+        padding: 0 5px;
+        background: #A6B0C3;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+        & > img{
+            margin: 0 8px 0 11px;
+        }
+    }
+}
